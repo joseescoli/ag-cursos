@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/*===================================================
+RESET de estilos
+===================================================*/
+/* reseteo propiedad Bootstrap */
+*, ::after, ::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: content-box;
+}
+
+.app {
+    display: block;
+    /* border: solid red; */
+}
+
+.navbar {
+    display: flex;
+    gap: 50px;
+    height: 40px;
+    background-color: whitesmoke;
+    margin: 10px;
+    align-items: center;
+    /* border: solid green; */
+    flex-wrap: wrap;
+    background-color: rgb(199, 202, 204);
+}
+
+.navbar ul {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 10px;
+}
+
+.navbar ul li {
+    width: 150px;
+    height: 22px;
+    margin-right: 20px;
+    list-style-type: none;
+    /* background-color: rgb(199, 202, 204); */
+    background: linear-gradient(to left, rgb(192, 192, 192) 90%, red 80%);
+    border: solid red 1px;
+    border-radius: 15px;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.navbar ul li:hover {
+    background: none;
+    background-color: yellow;
+}
+
+.carrito {
+    /* position: fixed; */
+    margin-left: 40%;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.carrito img {
+    width: 32px;
+    height: 32px;
+}
+
+.carrito span {
+    position: absolute;
+    right: 10;
+    height: 20px;
+    width: 20px;
+    border-radius: 40px;
+    background-color: red;
+    text-align: center;
+}
+.principal {
+    margin: 10px;
+    display: block;
+    /* border: solid orange; */
+    height: 100%;
+}
+
+.principal h1 {
+    font-weight: bold;
+}
