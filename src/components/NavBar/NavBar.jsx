@@ -1,20 +1,37 @@
 import '../App.css';
 import logo from './escudo.png';
+import { NavLink, Link } from 'react-router-dom';
 
 import { CartWidget } from "../CartWidget/CartWidget"
 
 export const NavBar = () => {
    return (
         <nav className='navbar'>
-            <img src={logo} className='logo' alt="Logo" />
-            <ul>
-                <li>Niños</li>
-                <li>Adolescentes</li>
-                <li>Adultos</li>
-                <li>First</li>
-                <li>Acelerados</li>
-            </ul>
-            <CartWidget />
+            <div>
+                <Link to={"/"}>
+                    <img src={logo} className='logo' alt="Logo" />
+                </Link>
+                <ul>
+                    <NavLink to={"/category/Niños"} className={({ isActive }) => isActive ? 'catActiva':'catInactiva'}>
+                        <li>Niños</li>
+                    </NavLink>
+                    <NavLink to={"/category/Adolescentes"} className={({ isActive }) => isActive ? 'catActiva':'catInactiva'}>
+                        <li>Teens</li>
+                    </NavLink>
+                    <NavLink to={"/category/Adultos"} className={({ isActive }) => isActive ? 'catActiva':'catInactiva'}>
+                        <li>Adults</li>
+                    </NavLink>
+                    <NavLink to={"/category/First"} className={({ isActive }) => isActive ? 'catActiva':'catInactiva'}>
+                        <li>FCE</li>
+                    </NavLink>
+                    <NavLink to={"/category/Acelerados"} className={({ isActive }) => isActive ? 'catActiva':'catInactiva'}>
+                        <li>Acelerados</li>
+                    </NavLink>
+                </ul>
+            </div>
+            <div>
+                <CartWidget cantCarrito={0} />
+            </div>
         </nav>
    )
 }
