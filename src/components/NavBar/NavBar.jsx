@@ -5,7 +5,7 @@ import { NavLink, Link } from 'react-router-dom';
 import { CartWidget } from "../CartWidget/CartWidget"
 
 export const NavBar = () => {
-   return (
+        return (
         <nav className='navbar'>
             <div>
                 <Link to={"/"}>
@@ -24,13 +24,13 @@ export const NavBar = () => {
                     <NavLink to={"/category/First"} className={({ isActive }) => isActive ? 'catActiva':'catInactiva'}>
                         <li>FCE</li>
                     </NavLink>
-                    <NavLink to={"/category/Acelerados"} className={({ isActive }) => isActive ? 'catActiva':'catInactiva'}>
-                        <li>Acelerados</li>
+                    <NavLink to={"/category/Acelerado"} className={({ isActive }) => isActive ? 'catActiva':'catInactiva'}>
+                        <li>Acelerado</li>
                     </NavLink>
                 </ul>
             </div>
             <div>
-                <CartWidget cantCarrito={0} />
+                <CartWidget />
             </div>
         </nav>
    )
